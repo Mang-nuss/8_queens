@@ -15,6 +15,7 @@ class Game:
         
         self.setOfPieces = []
         self.firstMoves = []
+        self.piecesThatCannotBeMovedFirst = []
         self.positionsOfTheTrial = []
         self.pieceNr = 1
         self.nrOfTrialsStarted = 0
@@ -40,11 +41,12 @@ class Game:
 
     #Get & Set methods
     def getCurrentPiece(self):
+        #print("piece is:", game.currentPiece.getPieceId())
         return game.currentPiece
     
     def setCurrentPiece(self,pieceNr):
-        index = pieceNr-1
-        game.currentPiece = game.setOfPieces[index]
+        game.currentPiece = game.setOfPieces[pieceNr-1]
+        #print("Switching piece. Current piece is:", pieceNr)
 
     def getNrOfTrials(self):
         return game.nrOfTrialsStarted
@@ -65,6 +67,11 @@ class Game:
                 isThreatened = True
         return isThreatened
 
+    def positionsAreReset(self):
+        for i in range(dimension):
+            piece = game.setOfPieces[i]
+            piece.setCurrentPosition(self.positions[i])
+
     def theThreateningPieces(self,pos):
         arrayOfPieces = []
         if game.positionIsThreatened(pos):
@@ -73,6 +80,9 @@ class Game:
                     if t == pos:
                         arrayOfPieces.append(p)
         return arrayOfPieces
+
+    def addToPiecesThatCannotBeMovedFirst(self,pieceId):
+        self.piecesThatCannotBeMovedFirst.append(pieceId)
 
     'the board'
     #Method: for each of the nr of rows, the row nr is put on index 0.
@@ -99,13 +109,34 @@ class Game:
         return positions
     
     'TDD session methods'
+    def pictureBoard(self):
+        print("\n")
+        print("-------------------------------------------------")
 
+        for rowNr in range(game.dimension):
+            row = "|"
+            for n in range(len(game.setOfPieces)):
+                game.setCurrentPiece(n)
+                piece = game.getCurrentPiece()
+                pos = piece.getCurrentPosition()
+                x = pos[0]
+                y = pos[1]
+                if x == rowNr+1:
+                    row += "  X  |"
+                else:
+                    row += "     |"
+            print(row)
+            if rowNr != game.dimension-1:
+                print("+-----+-----+-----+-----+-----+-----+-----+-----+")
+            else:
+                print("-------------------------------------------------")
 
     def move(self,piece):
+        piece.threatensPositions.clear()
         currentPosition = piece.getCurrentPosition()
         newPos = [currentPosition[0]+1, currentPosition[1]]
         piece.setCurrentPosition(newPos)
-        print("piece with id", piece.getPieceId(), "is now at", newPos)
+        print("Move: Piece with id", piece.getPieceId(), "is now at", newPos)
 
     def pieceIsNow(self,id):
         game.setCurrentPiece(id)
@@ -119,6 +150,22 @@ class Game:
         while i < self.dimension:
             self.move(p)
             i += 1
+
+    def isThreatening(self,piece):
+
+        print("----THREATEN CHECK----")
+        threatened = False
+        for p in range(len(game.setOfPieces)):
+            game.setCurrentPiece(p+1)
+            currentPiece = game.getCurrentPiece()
+            if currentPiece.getCurrentPosition() in piece.threatensPositions:
+                threatened = True
+                break
+                print("piece with id:", piece.getPieceId(),
+                      "is threatening piece nr", currentPiece.getPieceId(),
+                      "at position", currentPiece.getCurrentPosition())
+
+        return threatened
 
     #TDD todo 1
     def pieceHasThreatenedPositions(self,piece,dimension):
@@ -143,6 +190,7 @@ class Game:
         else:
             nr = piece.pieceId+1 
         game.setCurrentPiece(nr) #since length = dimension-1
+        return game.getCurrentPiece()
         print("Pos of", piece.pieceId, "after switching to next piece: ", piece.getCurrentPosition())
 
     #Method to represent Trial Results

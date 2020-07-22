@@ -42,11 +42,11 @@ def test_2(p,g):
         assert p.getCurrentPosition() == [1,i+1]
 
 
-# piece 1 is registered as threatened by 7 row positions
+# piece 1 is registered as threatening 7 row positions
 def test_3(p,g):
     p = g.pieceIsNow(1)
     p.checkRow(8)
-    assert len(p.threatensPositions) == 8
+    assert len(p.threatensPositions) == 7
 
 
 # these positions are the correct ones
@@ -56,29 +56,31 @@ def test_4(p,g):
         assert p.getPieceId() == i+1
 
 
-# piece 1 is registered as not threatened from up left
+# piece 1 is registered as not threatening up left
 def test_5(p,g):
     p = g.pieceIsNow(1)
     p.checkUpLeft()
-    assert len(p.threatensPositions) == 8
+    assert len(p.threatensPositions) == 7
 
 
-# piece 1 is registered as not threatened from up right
+# piece 1 is registered as not threatening up right
 def test_6(p,g):
     p.checkUpRight(8)
-    assert len(p.threatensPositions) == 8
+    assert len(p.threatensPositions) == 7
 
 
-# piece 1 is registered as not threatened from down left
+# piece 1 is registered as not threatening down left
 def test_7(p,g):
     p.checkDownLeft(8)
-    assert len(p.threatensPositions) == 8
+    assert len(p.threatensPositions) == 7
 
 
-# piece 1 is registered as threatened from down right
+# piece 1 is registered as threatening down right
 def test_8(p,g):
     p.checkDownRight(8)
-    assert len(p.threatensPositions) == 15
+    assert len(p.threatensPositions) == 14
+
+# These control functions are refactored as registerThreatenedPositions
 
 
 # the other pieces do not belong to the diagonal positions
@@ -89,12 +91,12 @@ def test_9(p,g):
         assert current.getCurrentPosition() not in p.threatensPositions
 
 
-# all pieces are registered as threatened in the same way
+# all pieces are registered as threatening in the same way
 def test_10(p,g):
     for i in range(2,8):
         p = g.pieceIsNow(i)
         p.registerThreatenedPositions(8)
-        assert len(p.threatensPositions) == 15
+        assert len(p.threatensPositions) == 14
 
 
 # piece 1 takes next position
@@ -122,22 +124,125 @@ def test_13(p,g):
     assert p.getCurrentPosition() == [8,1]
 
 
-# on all positions, it is registered as threatened
+# on all positions, it is registered as threatening
 def test_14(p,g):
     p.setCurrentPosition([1,1])
     i = p.getCurrentPosition()[0]
     while i < g.dimension:
         g.move(p)
+        p.registerThreatenedPositions(g.dimension)
+        assert p.getCurrentPosition() == [i+1,p.getPieceId()]
+        i += 1
+
+    assert g.isThreatening(p) == True
+
+    """while i < g.dimension:
+        g.move(p)
         assert g.pieceHasThreatenedPositions(p,g.dimension) == True
         #p.clearThreatensPositions()
-        i += 1
+        i += 1"""
+
+# piece 1 is registered as threatening by correct reason
+def test_15(p,g):
+    assert p.getPieceId() == 8
+    p.registerThreatenedPositions(g.dimension)
+    assert p.getCurrentPosition() == [1,8]
+    assert len(p.threatensPositions) == 14
+
+def test_16(p,g):
+    li = p.threatensPositions
+    p = g.pieceIsNow(8)
+    assert p.getCurrentPosition() not in li #does not threaten itself
+
+
+# piece 1 is moved back to first position
+def test_17(p,g):
+    p = g.pieceIsNow(1)
+    p.setCurrentPosition([1,p.getPieceId()])
+    assert p.getCurrentPosition() == [1,1]
+
+
+# piece 1 cannot be the first to be moved (and is listed as such)
+def test_18(p,g):
+    g.addToPiecesThatCannotBeMovedFirst(p.getPieceId())
+    assert g.piecesThatCannotBeMovedFirst[0] == 1
+
+
+# next piece (2) is picked
+def test_19(p,g):
+    p = g.pickNextPiece()
+    assert p.getPieceId() == 2
+    assert g.getCurrentPiece().getPieceId() == 2
+
+
+# piece 2 is moved until it does not threaten
+def test_20(p,g):
+
+    assert p.getPieceId() == 2
+    for i in range(g.dimension-1):
+        g.move(p)
+        p.registerThreatenedPositions(g.dimension)
+
+        threatening = g.isThreatening(p)
+        if not threatening:
+            break
+
+    assert p.getCurrentPosition() == [8, 2]
+    assert [1,8] not in p.threatensPositions
+    assert threatening == False
+
+
+# piece 3 is moved until it does not threaten
+def test_21(p,g):
+
+    g.positionsAreReset()
+    g.setCurrentPiece(3)
+    p = g.getCurrentPiece()
+
+    for i in range(g.dimension-1):
+        g.move(p)
+        p.registerThreatenedPositions(g.dimension)
+
+        if not g.isThreatening(p):
+            break
+
+    #piece = g.setOfPieces[2] #piece nr 3
+    #assert piece.getPieceId() == 3
+    #assert piece.getCurrentPosition() == [1,3]
+    assert p.getCurrentPosition() == [7, 3]
+    #assert [7,3] not in p.threatensPositions
+    assert g.isThreatening(p) == False
+
+
+# piece 4 is moved until it does not threaten
+def test_22(p,g):
+
+    g.positionsAreReset()
+    g.setCurrentPiece(4)
+    p = g.getCurrentPiece()
+
+    for i in range(g.dimension-1):
+        g.move(p)
+        p.registerThreatenedPositions(g.dimension)
+
+        if not g.isThreatening(p):
+            break
+
+    #piece = g.setOfPieces[2] #piece nr 3
+    #assert piece.getPieceId() == 3
+    #assert piece.getCurrentPosition() == [1,3]
+    assert p.getCurrentPosition() == [6, 4]
+    #assert [7,3] not in p.threatensPositions
+    assert g.isThreatening(p) == False
+
+
+def test_23(p,g):
+    g.pictureBoard()
+    assert True
 
 
 """
 
-- all other pieces have kept their positions
-- piece 1 takes all positions in its column
-- on all positions, it is registered as threatened
 - piece 1 is registered as threatened by correct reason
 - piece 1 is moved back to first position
 - piece 1 cannot be the first to be moved (and is listed as such)
@@ -145,11 +250,14 @@ def test_14(p,g):
 - piece 2 is moved until it is not threatened
 - piece 2 is registered as not threatened
 - piece 2 is registered as moved
+- piece 2 is now moved. piece 3 tries out every spot, unsuccessfully.
+-
 - all remaining pieces are moved in the same way
 - check if fulfilled
 - if not, the first threatened piece (that can be the first to be moved) is again picked 
     (it may be the same piece as before)
 - when moved, piece is registered as moved
-- if a piece is to be tried out a 2nd time since last registered move, game is over.
+- if a piece is to be tried out a 2nd time since last registered move, game is over
+- the piece that was moved first
 
 """

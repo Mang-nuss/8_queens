@@ -12,7 +12,7 @@ class  Piece:
 
     def setCurrentPosition(self,position): self.currentPosition = position
     def getCurrentPosition(self):
-        print("position of piece is:", self.currentPosition)
+        #print("position of piece is:", self.currentPosition)
         return self.currentPosition
     def clearThreatensPositions(self): self.threatensPositions[:] = []
     def addToThreatensPositions(self,position): self.threatensPositions.append(position)
@@ -35,9 +35,9 @@ class  Piece:
         print("-----------------------\nchecking row:")
         for i in range(dimension): #Default: 8x8!
 
-            #Every pos, including the current one, on this fixed row is added to the threatened list
-            self.addToThreatensPositions([row,i+1])
-            print([row,i+1])
+            if i+1 != self.currentPosition[1]:
+                self.addToThreatensPositions([row,i+1])
+                print([row,i+1])
 
     #up-left
     def checkUpLeft(self):
