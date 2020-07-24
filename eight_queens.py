@@ -12,6 +12,7 @@ class Game:
         self.positions = self.generateBoard(dimension)
         self.occupiedPositions = self.positions[:dimension]
         self.openPositions = self.positions[dimension:]
+        self.roundIsOver = False
         
         self.setOfPieces = []
         self.firstMoves = []
@@ -19,16 +20,19 @@ class Game:
         self.positionsOfTheTrial = []
         self.pieceNr = 1
         self.nrOfTrialsStarted = 0
+        self.piecesMovedInRound = []
 
         for i in range(dimension):
-            piece = Piece(self.pieceNr)
+            piece = Piece(i+1) #the piece gets the nr that is index+1
             self.setOfPieces.insert(i, piece)
             piece.setCurrentPosition(self.positions[i])
             #piece.registerThreatenedPositions(dimension,piece.currentPosition)
-
+            print("piece with id:", piece.pieceId, "has pos:", piece.currentPosition)
             self.pieceNr += 1
         
         self.currentPiece = self.setOfPieces[0]
+        p = self.getCurrentPiece()
+        print("game, currentpiece:", p.getPieceId())
 
     """
     def updatePositions(self,pos): 
@@ -42,10 +46,10 @@ class Game:
     #Get & Set methods
     def getCurrentPiece(self):
         #print("piece is:", game.currentPiece.getPieceId())
-        return game.currentPiece
+        return self.currentPiece
     
     def setCurrentPiece(self,pieceNr):
-        game.currentPiece = game.setOfPieces[pieceNr-1]
+        self.currentPiece = self.setOfPieces[pieceNr-1]
         #print("Switching piece. Current piece is:", pieceNr)
 
     def getNrOfTrials(self):
@@ -143,6 +147,22 @@ class Game:
         piece = game.getCurrentPiece()
         return piece
 
+    def checkIfPieceCanBeMovedFirst(self,piece):
+        if piece.cannotBeMoved & len(self.piecesMovedInRound) == 1:
+            self.addToPiecesThatCannotBeMovedFirst(piece.getPieceId())
+            piece.cannotBeMovedFirst = True
+        elif self.roundIsOver:
+            self.addToPiecesThatCannotBeMovedFirst(piece.getPieceId())
+            piece.cannotBeMovedFirst = True
+
+    def roundIsOver(self):
+        if len(self.piecesMovedInRound) == 8:
+            return True
+        else:
+            return False
+
+
+
     # piece takes all positions in its column
     def pieceTakesNextPositionsInItsColumn(self,piece):
         p = self.pieceIsNow(piece)
@@ -182,15 +202,16 @@ class Game:
 
     #TDD todo 2
     def pickNextPiece(self):
-        piece = game.getCurrentPiece()
+        piece = self.getCurrentPiece()
+        self.piecesMovedInRound.append(piece)
         #print('current pos: ', str(piece.getCurrentPosition()))
         nr = 0
-        if piece.pieceId == game.dimension:
+        if piece.pieceId == self.dimension:
             nr = 1
         else:
             nr = piece.pieceId+1 
-        game.setCurrentPiece(nr) #since length = dimension-1
-        return game.getCurrentPiece()
+        self.setCurrentPiece(nr) #since length = dimension-1
+        return self.getCurrentPiece()
         print("Pos of", piece.pieceId, "after switching to next piece: ", piece.getCurrentPosition())
 
     #Method to represent Trial Results

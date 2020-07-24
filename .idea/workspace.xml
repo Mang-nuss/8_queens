@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="830bf38c-22ce-4c70-b487-70ddf0f5b526" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eight_queens.py" beforeDir="false" afterPath="$PROJECT_DIR$/eight_queens.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/piece.py" beforeDir="false" afterPath="$PROJECT_DIR$/piece.py" afterDir="false" />
@@ -29,21 +28,6 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager" selected="Python tests.unittests">
-    <configuration name="pytest for test_eightqueens.test_14" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="8queens" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_eightqueens.test_14&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="pytest for test_eightqueens.test_15" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="8queens" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -59,7 +43,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_eightqueens.test_20" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_eightqueens.test_2" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="8queens" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -70,7 +54,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_eightqueens.test_20&quot;" />
+      <option name="_new_target" value="&quot;test_eightqueens.test_2&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -104,6 +88,21 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest for test_eightqueens.test_24" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="8queens" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_eightqueens.test_24&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="unittests" type="tests" factoryName="py.test">
       <module name="8queens" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -121,19 +120,19 @@
     </configuration>
     <list>
       <item itemvalue="Python tests.unittests" />
-      <item itemvalue="Python tests.pytest for test_eightqueens.test_20" />
-      <item itemvalue="Python tests.pytest for test_eightqueens.test_14" />
       <item itemvalue="Python tests.pytest for test_eightqueens.test_21" />
       <item itemvalue="Python tests.pytest for test_eightqueens.test_15" />
       <item itemvalue="Python tests.pytest for test_eightqueens.test_23" />
+      <item itemvalue="Python tests.pytest for test_eightqueens.test_2" />
+      <item itemvalue="Python tests.pytest for test_eightqueens.test_24" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest for test_eightqueens.test_23" />
+        <item itemvalue="Python tests.pytest for test_eightqueens.test_24" />
         <item itemvalue="Python tests.pytest for test_eightqueens.test_15" />
         <item itemvalue="Python tests.pytest for test_eightqueens.test_21" />
-        <item itemvalue="Python tests.pytest for test_eightqueens.test_20" />
-        <item itemvalue="Python tests.pytest for test_eightqueens.test_14" />
+        <item itemvalue="Python tests.pytest for test_eightqueens.test_2" />
+        <item itemvalue="Python tests.pytest for test_eightqueens.test_23" />
       </list>
     </recent_temporary>
   </component>
@@ -171,38 +170,46 @@
       <screen x="0" y="23" width="1440" height="832" />
     </state>
     <state x="119" y="123" width="1200" height="617" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1440.832/1440.23.1920.1057@0.23.1440.832" timestamp="1595231530653" />
-    <state width="470" height="696" key="GridCell.Tab.0.bottom" timestamp="1595406325218">
-      <screen x="0" y="23" width="1440" height="830" />
+    <state width="470" height="696" key="GridCell.Tab.0.bottom" timestamp="1595583642948">
+      <screen x="0" y="23" width="1440" height="828" />
     </state>
+    <state width="470" height="696" key="GridCell.Tab.0.bottom/0.23.1440.828/1440.23.1920.1057@0.23.1440.828" timestamp="1595583642948" />
+    <state width="470" height="696" key="GridCell.Tab.0.bottom/0.23.1440.828@0.23.1440.828" timestamp="1595538213399" />
     <state width="470" height="696" key="GridCell.Tab.0.bottom/0.23.1440.830/1440.23.1920.1057@0.23.1440.830" timestamp="1595364113580" />
-    <state width="470" height="696" key="GridCell.Tab.0.bottom/0.23.1440.830@0.23.1440.830" timestamp="1595406325218" />
+    <state width="470" height="696" key="GridCell.Tab.0.bottom/0.23.1440.830@0.23.1440.830" timestamp="1595506682081" />
     <state width="1379" height="210" key="GridCell.Tab.0.bottom/0.23.1440.831/1440.23.1920.1057@0.23.1440.831" timestamp="1594911245592" />
     <state width="471" height="458" key="GridCell.Tab.0.bottom/0.23.1440.832/1440.23.1920.1057@0.23.1440.832" timestamp="1595231650673" />
     <state width="471" height="696" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1920.996@0.23.1440.877" timestamp="1594985407812" />
     <state width="1379" height="210" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1594905576439" />
-    <state width="470" height="696" key="GridCell.Tab.0.center" timestamp="1595406325217">
-      <screen x="0" y="23" width="1440" height="830" />
+    <state width="470" height="696" key="GridCell.Tab.0.center" timestamp="1595583642947">
+      <screen x="0" y="23" width="1440" height="828" />
     </state>
+    <state width="470" height="696" key="GridCell.Tab.0.center/0.23.1440.828/1440.23.1920.1057@0.23.1440.828" timestamp="1595583642947" />
+    <state width="470" height="696" key="GridCell.Tab.0.center/0.23.1440.828@0.23.1440.828" timestamp="1595538213398" />
     <state width="470" height="696" key="GridCell.Tab.0.center/0.23.1440.830/1440.23.1920.1057@0.23.1440.830" timestamp="1595364113578" />
-    <state width="470" height="696" key="GridCell.Tab.0.center/0.23.1440.830@0.23.1440.830" timestamp="1595406325217" />
+    <state width="470" height="696" key="GridCell.Tab.0.center/0.23.1440.830@0.23.1440.830" timestamp="1595506682080" />
     <state width="1379" height="210" key="GridCell.Tab.0.center/0.23.1440.831/1440.23.1920.1057@0.23.1440.831" timestamp="1594911245590" />
     <state width="471" height="458" key="GridCell.Tab.0.center/0.23.1440.832/1440.23.1920.1057@0.23.1440.832" timestamp="1595231650671" />
     <state width="471" height="696" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1920.996@0.23.1440.877" timestamp="1594985407811" />
     <state width="1379" height="210" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1594905576438" />
-    <state width="470" height="696" key="GridCell.Tab.0.left" timestamp="1595406325217">
-      <screen x="0" y="23" width="1440" height="830" />
+    <state width="470" height="696" key="GridCell.Tab.0.left" timestamp="1595583642946">
+      <screen x="0" y="23" width="1440" height="828" />
     </state>
+    <state width="470" height="696" key="GridCell.Tab.0.left/0.23.1440.828/1440.23.1920.1057@0.23.1440.828" timestamp="1595583642946" />
+    <state width="470" height="696" key="GridCell.Tab.0.left/0.23.1440.828@0.23.1440.828" timestamp="1595538213397" />
     <state width="470" height="696" key="GridCell.Tab.0.left/0.23.1440.830/1440.23.1920.1057@0.23.1440.830" timestamp="1595364113578" />
-    <state width="470" height="696" key="GridCell.Tab.0.left/0.23.1440.830@0.23.1440.830" timestamp="1595406325217" />
+    <state width="470" height="696" key="GridCell.Tab.0.left/0.23.1440.830@0.23.1440.830" timestamp="1595506682080" />
     <state width="1379" height="210" key="GridCell.Tab.0.left/0.23.1440.831/1440.23.1920.1057@0.23.1440.831" timestamp="1594911245589" />
     <state width="471" height="458" key="GridCell.Tab.0.left/0.23.1440.832/1440.23.1920.1057@0.23.1440.832" timestamp="1595231650671" />
     <state width="471" height="696" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1920.996@0.23.1440.877" timestamp="1594985407810" />
     <state width="1379" height="210" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1594905576437" />
-    <state width="470" height="696" key="GridCell.Tab.0.right" timestamp="1595406325218">
-      <screen x="0" y="23" width="1440" height="830" />
+    <state width="470" height="696" key="GridCell.Tab.0.right" timestamp="1595583642947">
+      <screen x="0" y="23" width="1440" height="828" />
     </state>
+    <state width="470" height="696" key="GridCell.Tab.0.right/0.23.1440.828/1440.23.1920.1057@0.23.1440.828" timestamp="1595583642947" />
+    <state width="470" height="696" key="GridCell.Tab.0.right/0.23.1440.828@0.23.1440.828" timestamp="1595538213398" />
     <state width="470" height="696" key="GridCell.Tab.0.right/0.23.1440.830/1440.23.1920.1057@0.23.1440.830" timestamp="1595364113579" />
-    <state width="470" height="696" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1595406325218" />
+    <state width="470" height="696" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1595506682081" />
     <state width="1379" height="210" key="GridCell.Tab.0.right/0.23.1440.831/1440.23.1920.1057@0.23.1440.831" timestamp="1594911245591" />
     <state width="471" height="458" key="GridCell.Tab.0.right/0.23.1440.832/1440.23.1920.1057@0.23.1440.832" timestamp="1595231650672" />
     <state width="471" height="696" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1920.996@0.23.1440.877" timestamp="1594985407811" />

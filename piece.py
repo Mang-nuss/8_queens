@@ -9,6 +9,7 @@ class  Piece:
         self.threatensPositions = []
         self.cannotBeMoved = False
         self.hasBeenConsideredAtLeastOnce = False
+        self.cannotBeMovedFirst = False
 
     def setCurrentPosition(self,position): self.currentPosition = position
     def getCurrentPosition(self):
@@ -17,7 +18,9 @@ class  Piece:
     def clearThreatensPositions(self): self.threatensPositions[:] = []
     def addToThreatensPositions(self,position): self.threatensPositions.append(position)
     def getThreatensPositions(self): return self.threatensPositions
-    def getPieceId(self): return self.pieceId
+    def getPieceId(self):
+        #print("piece id:", self.pieceId)
+        return self.pieceId
 
     #Method: collecting the checking methods
     def registerThreatenedPositions(self,dimension):
