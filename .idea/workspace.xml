@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="830bf38c-22ce-4c70-b487-70ddf0f5b526" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_game.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eight_queens.py" beforeDir="false" afterPath="$PROJECT_DIR$/eight_queens.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/piece.py" beforeDir="false" afterPath="$PROJECT_DIR$/piece.py" afterDir="false" />
@@ -27,8 +29,50 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Python tests.unittests">
-    <configuration name="pytest for test_eightqueens.test_15" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.game">
+    <configuration name="game" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="8queens" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/game.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_game" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="8queens" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_game.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_game.test_1" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="8queens" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -39,11 +83,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_eightqueens.test_15&quot;" />
+      <option name="_new_target" value="&quot;test_game.test_1&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_eightqueens.test_2" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_game.test_14" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="8queens" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -54,11 +98,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_eightqueens.test_2&quot;" />
+      <option name="_new_target" value="&quot;test_game.test_14&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_eightqueens.test_21" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_game.test_2" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="8queens" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -69,37 +113,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_eightqueens.test_21&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for test_eightqueens.test_23" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="8queens" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_eightqueens.test_23&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for test_eightqueens.test_24" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="8queens" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_eightqueens.test_24&quot;" />
+      <option name="_new_target" value="&quot;test_game.test_2&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -114,25 +128,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_eightqueens.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_game.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.test_game" />
       <item itemvalue="Python tests.unittests" />
-      <item itemvalue="Python tests.pytest for test_eightqueens.test_21" />
-      <item itemvalue="Python tests.pytest for test_eightqueens.test_15" />
-      <item itemvalue="Python tests.pytest for test_eightqueens.test_23" />
-      <item itemvalue="Python tests.pytest for test_eightqueens.test_2" />
-      <item itemvalue="Python tests.pytest for test_eightqueens.test_24" />
+      <item itemvalue="Python tests.pytest for test_game.test_1" />
+      <item itemvalue="Python tests.pytest for test_game.test_2" />
+      <item itemvalue="Python tests.pytest for test_game.test_14" />
+      <item itemvalue="Python.game" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest for test_eightqueens.test_24" />
-        <item itemvalue="Python tests.pytest for test_eightqueens.test_15" />
-        <item itemvalue="Python tests.pytest for test_eightqueens.test_21" />
-        <item itemvalue="Python tests.pytest for test_eightqueens.test_2" />
-        <item itemvalue="Python tests.pytest for test_eightqueens.test_23" />
+        <item itemvalue="Python.game" />
+        <item itemvalue="Python tests.pytest for test_game.test_14" />
+        <item itemvalue="Python.test_game" />
+        <item itemvalue="Python tests.pytest for test_game.test_2" />
+        <item itemvalue="Python tests.pytest for test_game.test_1" />
       </list>
     </recent_temporary>
   </component>
@@ -162,52 +176,61 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="183" y="93" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594890963082">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="183" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595840268660">
+      <screen x="0" y="23" width="1440" height="829" />
     </state>
+    <state x="183" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.829@0.23.1440.829" timestamp="1595840268660" />
     <state x="183" y="93" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877/1440.23.1920.996@0.23.1440.877" timestamp="1594890963082" />
     <state x="119" y="123" width="1200" height="617" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1595231530653">
       <screen x="0" y="23" width="1440" height="832" />
     </state>
     <state x="119" y="123" width="1200" height="617" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1440.832/1440.23.1920.1057@0.23.1440.832" timestamp="1595231530653" />
-    <state width="470" height="696" key="GridCell.Tab.0.bottom" timestamp="1595583642948">
-      <screen x="0" y="23" width="1440" height="828" />
+    <state width="470" height="696" key="GridCell.Tab.0.bottom" timestamp="1595947832112">
+      <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="470" height="696" key="GridCell.Tab.0.bottom/0.23.1440.828/1440.23.1920.1057@0.23.1440.828" timestamp="1595583642948" />
+    <state width="470" height="696" key="GridCell.Tab.0.bottom/0.23.1440.828/1440.23.1920.1057@0.23.1440.828" timestamp="1595584803819" />
     <state width="470" height="696" key="GridCell.Tab.0.bottom/0.23.1440.828@0.23.1440.828" timestamp="1595538213399" />
+    <state width="470" height="696" key="GridCell.Tab.0.bottom/0.23.1440.829/1440.23.1920.1057@0.23.1440.829" timestamp="1595947832112" />
+    <state width="470" height="696" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1595929479256" />
     <state width="470" height="696" key="GridCell.Tab.0.bottom/0.23.1440.830/1440.23.1920.1057@0.23.1440.830" timestamp="1595364113580" />
     <state width="470" height="696" key="GridCell.Tab.0.bottom/0.23.1440.830@0.23.1440.830" timestamp="1595506682081" />
     <state width="1379" height="210" key="GridCell.Tab.0.bottom/0.23.1440.831/1440.23.1920.1057@0.23.1440.831" timestamp="1594911245592" />
     <state width="471" height="458" key="GridCell.Tab.0.bottom/0.23.1440.832/1440.23.1920.1057@0.23.1440.832" timestamp="1595231650673" />
     <state width="471" height="696" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1920.996@0.23.1440.877" timestamp="1594985407812" />
     <state width="1379" height="210" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1594905576439" />
-    <state width="470" height="696" key="GridCell.Tab.0.center" timestamp="1595583642947">
-      <screen x="0" y="23" width="1440" height="828" />
+    <state width="470" height="696" key="GridCell.Tab.0.center" timestamp="1595947832110">
+      <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="470" height="696" key="GridCell.Tab.0.center/0.23.1440.828/1440.23.1920.1057@0.23.1440.828" timestamp="1595583642947" />
+    <state width="470" height="696" key="GridCell.Tab.0.center/0.23.1440.828/1440.23.1920.1057@0.23.1440.828" timestamp="1595584803818" />
     <state width="470" height="696" key="GridCell.Tab.0.center/0.23.1440.828@0.23.1440.828" timestamp="1595538213398" />
+    <state width="470" height="696" key="GridCell.Tab.0.center/0.23.1440.829/1440.23.1920.1057@0.23.1440.829" timestamp="1595947832110" />
+    <state width="470" height="696" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1595929479255" />
     <state width="470" height="696" key="GridCell.Tab.0.center/0.23.1440.830/1440.23.1920.1057@0.23.1440.830" timestamp="1595364113578" />
     <state width="470" height="696" key="GridCell.Tab.0.center/0.23.1440.830@0.23.1440.830" timestamp="1595506682080" />
     <state width="1379" height="210" key="GridCell.Tab.0.center/0.23.1440.831/1440.23.1920.1057@0.23.1440.831" timestamp="1594911245590" />
     <state width="471" height="458" key="GridCell.Tab.0.center/0.23.1440.832/1440.23.1920.1057@0.23.1440.832" timestamp="1595231650671" />
     <state width="471" height="696" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1920.996@0.23.1440.877" timestamp="1594985407811" />
     <state width="1379" height="210" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1594905576438" />
-    <state width="470" height="696" key="GridCell.Tab.0.left" timestamp="1595583642946">
-      <screen x="0" y="23" width="1440" height="828" />
+    <state width="470" height="696" key="GridCell.Tab.0.left" timestamp="1595947832109">
+      <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="470" height="696" key="GridCell.Tab.0.left/0.23.1440.828/1440.23.1920.1057@0.23.1440.828" timestamp="1595583642946" />
+    <state width="470" height="696" key="GridCell.Tab.0.left/0.23.1440.828/1440.23.1920.1057@0.23.1440.828" timestamp="1595584803817" />
     <state width="470" height="696" key="GridCell.Tab.0.left/0.23.1440.828@0.23.1440.828" timestamp="1595538213397" />
+    <state width="470" height="696" key="GridCell.Tab.0.left/0.23.1440.829/1440.23.1920.1057@0.23.1440.829" timestamp="1595947832109" />
+    <state width="470" height="696" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1595929479255" />
     <state width="470" height="696" key="GridCell.Tab.0.left/0.23.1440.830/1440.23.1920.1057@0.23.1440.830" timestamp="1595364113578" />
     <state width="470" height="696" key="GridCell.Tab.0.left/0.23.1440.830@0.23.1440.830" timestamp="1595506682080" />
     <state width="1379" height="210" key="GridCell.Tab.0.left/0.23.1440.831/1440.23.1920.1057@0.23.1440.831" timestamp="1594911245589" />
     <state width="471" height="458" key="GridCell.Tab.0.left/0.23.1440.832/1440.23.1920.1057@0.23.1440.832" timestamp="1595231650671" />
     <state width="471" height="696" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1920.996@0.23.1440.877" timestamp="1594985407810" />
     <state width="1379" height="210" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1594905576437" />
-    <state width="470" height="696" key="GridCell.Tab.0.right" timestamp="1595583642947">
-      <screen x="0" y="23" width="1440" height="828" />
+    <state width="470" height="696" key="GridCell.Tab.0.right" timestamp="1595947832111">
+      <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="470" height="696" key="GridCell.Tab.0.right/0.23.1440.828/1440.23.1920.1057@0.23.1440.828" timestamp="1595583642947" />
+    <state width="470" height="696" key="GridCell.Tab.0.right/0.23.1440.828/1440.23.1920.1057@0.23.1440.828" timestamp="1595584803819" />
     <state width="470" height="696" key="GridCell.Tab.0.right/0.23.1440.828@0.23.1440.828" timestamp="1595538213398" />
+    <state width="470" height="696" key="GridCell.Tab.0.right/0.23.1440.829/1440.23.1920.1057@0.23.1440.829" timestamp="1595947832111" />
+    <state width="470" height="696" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1595929479256" />
     <state width="470" height="696" key="GridCell.Tab.0.right/0.23.1440.830/1440.23.1920.1057@0.23.1440.830" timestamp="1595364113579" />
     <state width="470" height="696" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1595506682081" />
     <state width="1379" height="210" key="GridCell.Tab.0.right/0.23.1440.831/1440.23.1920.1057@0.23.1440.831" timestamp="1594911245591" />
@@ -228,5 +251,13 @@
     </state>
     <state x="398" y="264" key="com.intellij.ide.util.TipDialog/0.23.1440.831/1440.23.1920.1057@0.23.1440.831" timestamp="1594911984790" />
     <state x="398" y="277" key="com.intellij.ide.util.TipDialog/0.23.1440.877/1440.23.1920.996@0.23.1440.877" timestamp="1594926706823" />
+    <state x="481" y="69" key="refactoring.ChangeSignatureDialog" timestamp="1595947494216">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="481" y="69" key="refactoring.ChangeSignatureDialog/0.23.1440.829/1440.23.1920.1057@0.23.1440.829" timestamp="1595947494216" />
+    <state x="384" y="176" width="670" height="676" key="search.everywhere.popup" timestamp="1595940698156">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="384" y="176" width="670" height="676" key="search.everywhere.popup/0.23.1440.829/1440.23.1920.1057@0.23.1440.829" timestamp="1595940698156" />
   </component>
 </project>

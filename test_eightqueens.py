@@ -288,12 +288,21 @@ def test_23(p,g):
 
 # all remaining pieces are moved in the same way
 def test_24(p,g):
-    for n in range(len(g.setOfPieces)):
-        p = g.pieceIsNow(n+1)
+    p = g.pieceIsNow(4) # if these steps are not taken, the position remains from last test
+    p.setCurrentPosition([1,4])
+    for piece in g.setOfPieces:
         #x_spot = p.getCurrentPosition()[0]
         for i in range(g.dimension-1):
-            g.move(p)
-        assert p.getCurrentPosition()[0] == 8
+            g.move(piece)
+        if piece.getPieceId() == 5:
+            p = g.pieceIsNow(4)
+            #assert p.getCurrentPosition()[0] == g.dimension
+        assert piece.getCurrentPosition()[0] == g.dimension
+    assert piece.getPieceId() == 8
+    p = g.pieceIsNow(4)
+    assert p.getPieceId() == 4
+    assert g.getCurrentBoard(4) == [8, 4]
+    #assert p.getCurrentPosition() == [8,4]
     g.pictureBoard()
 
 # method for deciding whether or not piece can be moved first
@@ -305,7 +314,24 @@ def test_25(p,g):
     if g.isThreatening(p):
         p.cannotBeMoved = True
         g.checkIfPieceCanBeMovedFirst(p)
+    assert p.getPieceId() == 1
     assert p.cannotBeMovedFirst == True
+    assert p.getCurrentPosition() == [8,1]
+    g.pictureBoard()
+
+
+def test_26(p,g):
+    p = g.pickNextPiece()
+    g.piecesMovedInRound.append(p.getPieceId())
+    for i in range(g.dimension-1):
+        g.move(p)
+        p.registerThreatenedPositions(g.dimension)
+    if g.isThreatening(p):
+        p.cannotBeMoved = True
+        g.checkIfPieceCanBeMovedFirst(p)
+    assert p.getPieceId() == 2
+    #assert p.cannotBeMovedFirst == True
+    assert p.getCurrentPosition() == [8,2]
     g.pictureBoard()
 
 """

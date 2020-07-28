@@ -13,6 +13,7 @@ class Game:
         self.occupiedPositions = self.positions[:dimension]
         self.openPositions = self.positions[dimension:]
         self.roundIsOver = False
+        self.currentBoard = []
         
         self.setOfPieces = []
         self.firstMoves = []
@@ -26,6 +27,7 @@ class Game:
             piece = Piece(i+1) #the piece gets the nr that is index+1
             self.setOfPieces.insert(i, piece)
             piece.setCurrentPosition(self.positions[i])
+            self.currentBoard.append(self.positions[i])
             #piece.registerThreatenedPositions(dimension,piece.currentPosition)
             print("piece with id:", piece.pieceId, "has pos:", piece.currentPosition)
             self.pieceNr += 1
@@ -51,6 +53,9 @@ class Game:
     def setCurrentPiece(self,pieceNr):
         self.currentPiece = self.setOfPieces[pieceNr-1]
         #print("Switching piece. Current piece is:", pieceNr)
+
+    def getCurrentBoard(self,pieceNr):
+        return self.currentBoard[pieceNr-1]
 
     def getNrOfTrials(self):
         return game.nrOfTrialsStarted
@@ -117,20 +122,19 @@ class Game:
         print("\n")
         print("-------------------------------------------------")
 
-        for rowNr in range(game.dimension):
+        for rowNr in range(self.dimension):
             row = "|"
-            for n in range(len(game.setOfPieces)):
-                game.setCurrentPiece(n)
-                piece = game.getCurrentPiece()
-                pos = piece.getCurrentPosition()
+            for n in range(len(self.setOfPieces)):
+                #piece = game.pieceIsNow(n+1)
+                piece = self.pickNextPiece()
+                pos = self.getCurrentBoard(piece.getPieceId())
                 x = pos[0]
-                y = pos[1]
                 if x == rowNr+1:
                     row += "  X  |"
                 else:
                     row += "     |"
             print(row)
-            if rowNr != game.dimension-1:
+            if rowNr != self.dimension-1:
                 print("+-----+-----+-----+-----+-----+-----+-----+-----+")
             else:
                 print("-------------------------------------------------")
@@ -139,8 +143,9 @@ class Game:
         piece.threatensPositions.clear()
         currentPosition = piece.getCurrentPosition()
         newPos = [currentPosition[0]+1, currentPosition[1]]
+        self.currentBoard[piece.getPieceId()-1] = newPos
         piece.setCurrentPosition(newPos)
-        print("Move: Piece with id", piece.getPieceId(), "is now at", newPos)
+        print("Move: Piece with id", piece.getPieceId(), "is now at", piece.getCurrentPosition())
 
     def pieceIsNow(self,id):
         game.setCurrentPiece(id)

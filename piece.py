@@ -1,7 +1,7 @@
 #author: MJ
 #2019-12-11
 
-class  Piece:
+class Piece:
 
     def __init__(self,nr):
         self.pieceId = nr
